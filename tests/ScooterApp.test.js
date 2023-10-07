@@ -14,9 +14,26 @@ describe("registerUser method tests", () => {
 });
 
 // log in
+test("Should return instance of user", () => {
+  let response = scooterApp.loginUser("Joe Bloggs", "test123", 21);
+  expect(response).toBeInstanceOf(User);
+});
 
 // log out
+test("Should return instance of user", () => {
+  let response = scooterApp.logoutUser("Joe Bloggs", "test123", 21);
+  expect(response).toBeInstanceOf(User);
+});
+
+
 
 // rent scooter
-
+test("Should return instance of scooter", () => {
+  let response = scooterApp.rentScooter("Joe Bloggs", "test123", 21);
+  expect(response).toBeInstanceOf(Scooter);
+});
 // dock scooter
+test("Should return instance of scooter", () => {
+  let response = scooterApp.dockScooter("Joe Bloggs", "test123", 21);
+  expect(response).toBeInstanceOf(Scooter);
+});
